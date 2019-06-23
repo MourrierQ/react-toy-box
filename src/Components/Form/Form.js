@@ -94,11 +94,37 @@ export default class Form extends Component {
     );
   };
 
+  generateCheckboxes = (field, key) => {
+    const checkboxes = field.checkboxes.map((checkbox, index) => (
+      <div key={index}>
+        <label htmlFor={"checkbox_" + field.name + "_" + index}>
+          {checkbox.value}
+        </label>
+        <input
+          type="checkbox"
+          name={field.name}
+          checked={checkbox.isDefault}
+          id={"checkbox_" + field.name + "_" + index}
+        />
+      </div>
+    ));
+    if (field.label) {
+      return (
+        <div key={key} className={classes.InputGroup}>
+          <label htmlFor={field.name}>{field.label}</label>
+          <div className={classes.CheckboxGroup}>{checkboxes}</div>
+        </div>
+      );
+    }
+    return <div className={classes.CheckboxGroup}>{checkboxes}</div>;
+  };
+
   generateInputTypes = () => {
     return {
       text: this.generateTextInput,
       email: this.generateEmailInput,
-      password: this.generatePasswordInput
+      password: this.generatePasswordInput,
+      checkbox: this.generateCheckboxes
     };
   };
 

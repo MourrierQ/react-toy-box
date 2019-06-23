@@ -50,4 +50,19 @@ $main-black: #20232a;
       font-weight: bold;
     }
   }
+
+  .CheckboxGroup {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    label {
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 20px;
+    }
+  }
 }

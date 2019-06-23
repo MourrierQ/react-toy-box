@@ -33,6 +33,20 @@ export default class Signin extends Component {
         required: true,
         defaultValue: "",
         placeholder: "Password"
+      },
+      {
+        type: "checkbox",
+        label: "Privacy Settings",
+        checkboxes: [
+          {
+            isDefault: false,
+            value: "Public"
+          },
+          {
+            isDefault: true,
+            value: "Private"
+          }
+        ]
       }
     ];
     return (
