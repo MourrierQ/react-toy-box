@@ -1,20 +1,36 @@
-.Navbar {
-  background-color: pink;
-  height: 50px;
+$react-color: #61dafb;
+$main-black: #20232a;
+
+.Navbar.Top {
+  background-color: $main-black;
+  color: #fff;
+  height: 60px;
 
   .container {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: blue;
-    padding: 0;
+    display: flex;
     height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
   }
 
   .Logo {
-    background-color: fff;
+    display: block;
+    height: 100%;
+    a {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      img {
+        display: block;
+        height: 80px;
+        margin: 0;
+        padding: 0;
+        width: 80px;
+      }
+    }
   }
 
   ul {
@@ -24,24 +40,103 @@
     list-style: none;
     margin: 0;
     li {
-      flex: 1;
-      background-color: #fff;
-      height: 100%;
-      display: flex;
       align-items: center;
+      display: flex;
+      flex: 1;
+      height: 100%;
 
       a {
-        display: flex;
         align-items: center;
-        background-color: green;
+        border-bottom: 3px solid transparent;
+        box-sizing: border-box;
+        color: inherit;
+        display: flex;
+        font-weight: 300;
         height: 100%;
-        padding: 0 20px;
-        width: 50px;
+        justify-content: center;
         text-decoration: none;
+        width: 80px;
       }
 
       a:hover {
-        background-color: #fff;
+        border-bottom: 3px solid $react-color;
+        color: $react-color;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.Navbar.SideLeft {
+  color: #fff;
+  background-color: $main-black;
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  width: 100px;
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  .Logo {
+    display: block;
+
+    a {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      img {
+        display: block;
+        height: 80px;
+        margin: 0;
+        padding: 0;
+        width: 80px;
+      }
+    }
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    height: 70%;
+    padding: 0;
+    width: 100%;
+    li {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        align-items: center;
+        border-right: 3px solid transparent;
+        box-sizing: border-box;
+        color: inherit;
+        display: flex;
+        font-weight: 300;
+        height: 50px;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        transition: all 0.2s;
+      }
+
+      a:hover {
+        border-right: 3px solid $react-color;
+        color: $react-color;
+        font-weight: 400;
       }
     }
   }

@@ -1,0 +1,53 @@
+$react-color: #61dafb;
+$main-black: #20232a;
+
+.genericForm {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    height: 50px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 100%;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-bottom: 3px solid $react-color;
+  }
+
+  input[type="Submit"] {
+    width: 100%;
+    background-color: $main-black;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 20px 0;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  input[type="Submit"]:hover {
+    color: $react-color;
+    cursor: pointer;
+  }
+
+  input {
+    margin-bottom: 20px;
+  }
+
+  .InputGroup {
+    margin-bottom: 30px;
+    label {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+}
