@@ -1,0 +1,48 @@
+.Navbar {
+  background-color: pink;
+  height: 50px;
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    padding: 0;
+    height: 100%;
+  }
+
+  .Logo {
+    background-color: fff;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    li {
+      flex: 1;
+      background-color: #fff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        background-color: green;
+        height: 100%;
+        padding: 0 20px;
+        width: 50px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        background-color: #fff;
+      }
+    }
+  }
+}
